@@ -68,3 +68,14 @@ vcpkg_installed/
 Testing/
 .cache/
 /.vs/Jira
+Jira/x64/Debug/Jira.exe.recipe
+Jira/x64/Debug/Jira.tlog/CL.command.1.tlog
+Jira/x64/Debug/Jira.tlog/Cl.items.tlog
+Jira/x64/Debug/Jira.tlog/CL.read.1.tlog
+Jira/x64/Debug/Jira.tlog/CL.write.1.tlog
+Jira/x64/Debug/Jira.tlog/Jira.lastbuildstate
+Jira/x64/Debug/Jira.tlog/link.command.1.tlog
+Jira/x64/Debug/Jira.tlog/link.read.1.tlog
+Jira/x64/Debug/Jira.tlog/link.secondary.1.tlog
+Jira/x64/Debug/Jira.tlog/link.write.1.tlog
+Jira/x64/Debug/vc143.idb

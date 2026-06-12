@@ -4,9 +4,9 @@ std::shared_ptr<User> ObjectFactory::createUser(const std::string& username, con
 {
     const std::string validatedRole = Validator::validateRole(role);
 
-    if (validatedRole == "Lecturer") return std::make_shared<Lecturer>(username, password, validatedRole);
-    if(validatedRole == "TeachingAssistant") return std::make_shared<TeachingAsisstant>(username, password, validatedRole);
-    if (validatedRole == "Student") return std::make_shared<Student>(username, password, validatedRole);
+    if (validatedRole == "Lecturer") return std::make_shared<Lecturer>(username, password);
+    if(validatedRole == "TeachingAssistant") return std::make_shared<TeachingAsisstant>(username, password);
+    if (validatedRole == "Student") return std::make_shared<Student>(username, password);
 
     throw std::invalid_argument("Admin is initialized by the panel upon starting of the program");
 }

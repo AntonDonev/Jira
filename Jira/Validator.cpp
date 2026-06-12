@@ -125,8 +125,3 @@ const std::string& Validator::validateStageStatus(const std::string& status)
 	return status;
 }
 
-const std::shared_ptr<User>& Validator::validatePtr(const std::shared_ptr<User>& ptr)
-{
-	if (ptr == nullptr) throw std::invalid_argument("A nullptr object has been passed");
-	return ptr;
-}

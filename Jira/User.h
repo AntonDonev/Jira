@@ -19,6 +19,8 @@ public:
 	const std::string& getUsername() const;
 	const std::string& getPassword() const;
 	const std::string& getRole() const;
+	bool checkPassword(const std::string& passwordToCheck) const;
+	bool hasRole(const std::string& roleToCheck) const;
 	unsigned getId() const;
 
 	virtual ~User() = default;

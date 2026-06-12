@@ -102,6 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp23</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,7 +124,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Admin.cpp" />
+    <ClCompile Include="CommandProcessor.cpp" />
+    <ClCompile Include="Comment.cpp" />
+    <ClCompile Include="FileSystem.cpp" />
     <ClCompile Include="Jira.cpp" />
+    <ClCompile Include="Lecturer.cpp" />
+    <ClCompile Include="ObjectFactory.cpp" />
+    <ClCompile Include="Project.cpp" />
+    <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="Student.cpp" />
+    <ClCompile Include="Task.cpp" />
+    <ClCompile Include="TeachingAssistant.cpp" />
+    <ClCompile Include="User.cpp" />
+    <ClCompile Include="Validator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Admin.h" />
+    <ClInclude Include="CommandProcessor.h" />
+    <ClInclude Include="Comment.h" />
+    <ClInclude Include="FileSystem.h" />
+    <ClInclude Include="Lecturer.h" />
+    <ClInclude Include="ObjectFactory.h" />
+    <ClInclude Include="Project.h" />
+    <ClInclude Include="Stage.h" />
+    <ClInclude Include="Student.h" />
+    <ClInclude Include="Task.h" />
+    <ClInclude Include="TeachingAssistant.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="Validator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
