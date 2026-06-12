@@ -26,6 +26,9 @@ public:
 	Task(const std::string& title, const std::string& description, const std::string& type, const std::string& taskPriority,
 		const std::string& status, const std::shared_ptr<User>& inCharge, const std::string& startingDate,
 		const std::string& endTime, unsigned points = 0, unsigned grade = 0);
+	Task(const std::string& id, const std::string& title, const std::string& description, const std::string& type,
+		const std::string& taskPriority, const std::string& status, const std::shared_ptr<User>& inCharge,
+		const std::string& startingDate, const std::string& endTime, unsigned points = 0, unsigned grade = 0);
 	std::string getId() const;
 	const std::string& getTitle() const;
 	const std::string& getDescription() const;

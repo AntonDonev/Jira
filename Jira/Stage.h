@@ -19,4 +19,6 @@ public:
 	void removeTask(const std::string& task);
 	bool containsTask(const std::string& task) const;
 	void printReport() const;
+	std::vector<std::string> getTaskIds() const;
+
 };

@@ -75,6 +75,32 @@ Task::Task(const std::string& title, const std::string& description, const std::
 	historyOfChanges.push_back("Task created by " + inCharge->getUsername() + ". Task info: " + getTaskInfo());
 }
 
+Task::Task(const std::string& id, const std::string& title, const std::string& description, const std::string& type,
+	const std::string& taskPriority, const std::string& status, const std::shared_ptr<User>& inCharge,
+	const std::string& startingDate, const std::string& endTime, unsigned points, unsigned grade) :
+	id(Validator::validateName(id)),
+	title(Validator::validateName(title)),
+	description(Validator::validateDescription(description)),
+	type(Validator::validateType(type)),
+	priority(Validator::validatePriority(taskPriority)),
+	status(Validator::validateStatus(status)),
+	inCharge(Validator::validatePtr(inCharge)),
+	startingDate(Validator::validateDate(startingDate)),
+	endTime(Validator::validateDate(endTime)),
+	points(Validator::validatePoints(points)),
+	grade(Validator::validateGrade(grade)) 
+{
+	unsigned currentId = 0;
+
+	for (size_t i = 4; i < id.length(); i++) {
+		currentId = currentId * 10 + (id[i] - '0');
+	}
+
+	if (taskCount <= currentId) {
+		taskCount = currentId + 1;
+	}
+}
+
 std::string Task::getId() const
 {
 	return this->id;
