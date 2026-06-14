@@ -117,9 +117,13 @@ void CommandProcessor::listTasksByEndDate(const std::string& date, bool afterDat
 
 void CommandProcessor::printHelp() const
 {
-	std::cout << "login, logout, register, list-projects, create-project, create-task" << std::endl;
-	std::cout << "assign-task, change-status, add-comment, my-tasks, upcoming-tasks, overdue" << std::endl;
-	std::cout << "add-tag, approve-task, review-task, grade-task, save, load, close" << std::endl;
+	std::cout << "login, logout, help, view-profile, close" << std::endl;
+	std::cout << "register, remove-user, save, load" << std::endl;
+	std::cout << "list-projects, list-all-projects, create-project, archive-project, add-user-to-project, join-project" << std::endl;
+	std::cout << "create-task, assign-task, change-status, add-comment, add-tag" << std::endl;
+	std::cout << "list-tasks, list-all-tasks, my-tasks, upcoming-tasks, overdue, search-tasks, filter-tasks" << std::endl;
+	std::cout << "approve-task, review-task, change-priority, grade-task, student-report" << std::endl;
+	std::cout << "create-stage, start-stage, finish-stage, stage-report, move-task-to-stage, finalize-project" << std::endl;
 }
 
 void CommandProcessor::execute(const std::string& line)

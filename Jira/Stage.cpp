@@ -3,7 +3,7 @@
 Stage::Stage(const std::string& name, const std::string& startingDate, const std::string& endingDate, const std::string& status) :
 	name(Validator::validateName(name)),
 	startingDate(Validator::validateDate(startingDate)),
-	endingDate(Validator::validateDate(endingDate)),
+	endingDate(endingDate.empty() ? endingDate : Validator::validateDate(endingDate)),
 	status(Validator::validateStageStatus(status))
 {
 }
