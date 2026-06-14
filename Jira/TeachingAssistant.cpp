@@ -1,6 +1,6 @@
 #include "TeachingAssistant.h"
 
 TeachingAsisstant::TeachingAsisstant(const std::string& username, const std::string& password) :
-	User(username, password, "TeachingAsisstant")
+	User(username, password, "TeachingAssistant")
 {
 }

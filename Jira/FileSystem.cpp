@@ -3,19 +3,22 @@
 std::vector<std::string> FileSystem::split(const std::string& text, char delimiter)
 {
     std::vector<std::string> parts;
-    size_t start = 0;
+    std::string current;
 
-    for (size_t i = 0; i < text.size(); i++) {
-        if (text[i] == delimiter) {
-            if (i > start) {
-                parts.push_back(text.substr(start, i - start));
+    for (char symbol : text) {
+        if (symbol == delimiter) {
+            if (!current.empty()) {
+                parts.push_back(current);
+                current.clear();
             }
-            start = i + 1;
+        }
+        else {
+            current += symbol;
         }
     }
 
-    if (start < text.size()) {
-        parts.push_back(text.substr(start));
+    if (!current.empty()) {
+        parts.push_back(current);
     }
 
     return parts;
@@ -209,7 +212,7 @@ void FileSystem::loadTasks(std::vector<std::shared_ptr<User>>& users, std::vecto
 
     std::string line;
     while (std::getline(file, line)) {
-        const std::vector<std::string> fields = split(line, '|');
+        std::vector<std::string> fields = split(line, '|');
         if (fields.size() != 16 || fields[0] != "TASK") {
             continue;
         }

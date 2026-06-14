@@ -240,7 +240,7 @@ void Task::addTag(const std::string& newTag, const std::shared_ptr<User>& addedB
 void Task::addComment(const Comment& newComment)
 {
 	comments.push_back(newComment);
-	historyOfChanges.push_back(newComment.getAuthorName() + " commented on task: " + newComment.getDescription() + " | " + newComment.getDate());
+	historyOfChanges.push_back(newComment.getAuthorName() + " commented on task on " + newComment.getDate() + ": " + newComment.getDescription());
 }
 
 bool Task::isAssignedTo(const std::shared_ptr<User>& user) const
